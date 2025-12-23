@@ -5,9 +5,10 @@ class Solution {
         while(start <= end){
             int mid = start + (end - start) / 2;
 
-            if(nums[start] == target){ idx = start; break;}
-            if(nums[end] == target) {idx = end; break;}
             if(nums[mid] == target) {idx = mid; break;}
+            if(nums[start] == target) {idx = start; break;}
+            if(nums[end] == target) {idx = end; break;}
+
             if(nums[start] < nums[mid]){
                 if(target > nums[start] && target < nums[mid]) end = mid - 1;
                 else start = mid + 1;
