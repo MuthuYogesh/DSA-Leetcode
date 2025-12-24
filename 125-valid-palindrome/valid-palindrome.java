@@ -2,10 +2,10 @@ class Solution {
     public boolean isPalindrome(String s) {
         int n = s.length();
         int left = 0, right = n - 1;
-        s = s.toLowerCase();
+        
         while(left<right){
-            char c1 = s.charAt(left);
-            char c2 = s.charAt(right);
+            char c1 = Character.toLowerCase(s.charAt(left));
+            char c2 = Character.toLowerCase(s.charAt(right));
 
             if(!Character.isLetterOrDigit(c1)){
                 left++;
