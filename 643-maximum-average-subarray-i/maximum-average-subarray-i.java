@@ -6,12 +6,12 @@ class Solution {
         for (int i = 0; i < k; i++){
             sum += nums[i];
         }
-        double maxAvg = (double)sum / k;
+        
+        int maxSum = sum;
         for(int i = k; i < n; i++){
             sum += nums[i] - nums[i - k];
-            double avg = (double)sum / k;
-            maxAvg = Math.max(avg, maxAvg);
+            maxSum = Math.max(maxSum, sum);
         }
-        return maxAvg;
+        return (double) maxSum / k;
     }
 }
