@@ -8,7 +8,7 @@ class Solution {
             System.out.println(mid);
 
             if(nums[mid] == target) return mid;
-            if(nums[start] <= nums[mid]){
+            else if(nums[start] <= nums[mid]){
                 if(nums[start] <= target && nums[mid] > target){
                     end = mid - 1;
                 }else{
