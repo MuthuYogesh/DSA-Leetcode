@@ -1,6 +1,6 @@
 class Solution {
     public long maximumSubarraySum(int[] nums, int k) {
-        long maxSum = Integer.MIN_VALUE;
+        long maxSum = 0;
         long curSum = 0;
 
         HashMap <Integer, Integer> mp = new HashMap<>();
@@ -27,6 +27,6 @@ class Solution {
                 maxSum = Math.max(maxSum, curSum);
         }
 
-        return maxSum == Integer.MIN_VALUE ? 0 : maxSum ;
+        return maxSum ;
     }
 }
